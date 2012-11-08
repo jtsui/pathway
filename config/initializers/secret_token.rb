@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Pathway::Application.config.secret_token = 'eae9ba73bd4c9c336b34362198c462aecb4da2215dc520542394ceddfdff026762b772f25d0c212dceef7d98c551fa2635d8073342a3aa413371981492ceb110'
+Pathway::Application.config.secret_token = '25aa38907a4783c704747e1d2695bb4b2771fc5af17d3ae252c8069dc036b479ccdcea47c62aac0221042e11cdbe012b6a5f6fc5002bc31aed23d2ff36c8e55e'
