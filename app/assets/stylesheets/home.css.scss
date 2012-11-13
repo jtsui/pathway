@@ -1,3 +1,34 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navlink {
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0 0 0 -5px;
+  font-weight: 200;
+  font-size: 18px;
+  color: #777777;
+  display: block;
+}
+
+.title {
+  float: left;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0 0 0 -5px;
+  font-weight: 200;
+  font-size: 25px;
+  color: #777777;
+  display: block;
+}
+
+.footer_pic {
+  padding-left: 30px;
+  vertical-align:middle;
+  max-height: 50px;
+  display:inline-block;
+}
