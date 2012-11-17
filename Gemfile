@@ -7,7 +7,7 @@ group :assets do
 end
 gem 'jquery-rails'
 gem "thin", ">= 1.5.0"
-gem "pg", ">= 0.14.1"
+gem 'sqlite3'
 gem "haml", ">= 3.1.7"
 gem "haml-rails", ">= 0.3.5", :group => :development
 gem "hpricot", ">= 0.8.6", :group => :development
@@ -20,3 +20,4 @@ gem "therubyracer", ">= 0.10.2", :group => :assets, :platform => :ruby
 gem "simple_form", ">= 2.0.4"
 gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
+
