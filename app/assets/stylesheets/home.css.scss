@@ -14,6 +14,10 @@
   display: block;
 }
 
+a.navlink, a.title {
+  text-decoration: none;
+}
+
 .title {
   float: left;
   padding-top: 10px;
