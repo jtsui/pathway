@@ -62,5 +62,20 @@
   vertical-align:middle;
   max-height: 50px;
   display:inline-block;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
+}
+
+.footer {
+  background-color: white;
+  border-top      : 1px solid #e5e5e5;
+  position        : fixed;
+  bottom          : 0px;
+  display         : inline;
+  width           : 100%;
+  left: 0px;
+  height: 85px;
+}
+
+.content {
+  margin-bottom: 100px;
 }
