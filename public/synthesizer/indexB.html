@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9 ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>color case B</title>  
+    
+    <style>
+    html {
+      background: #000;
+    }
+    body {
+      padding: 50px;
+    }
+    h1 {
+      color: #fff;
+    }
+      #searchBarContainer {
+        margin: 150px auto 0;
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1> Color Case B</h1>
+    <div id="searchBarContainer"></div>
+                 
+    <!-- scripts load at the end of the body -->
+    <!-- preference is given to CDNs for faster loading -->
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="scripts/jquery-1.9.0.min.js"><\/script>')</script>
+    <!-- <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script> -->
+    <script>window.jQuery.ui || document.write('<script src="scripts/jquery-ui-1.10.0.min.js"><\/script>')</script>    
+    
+    <!-- the next two lines insert the searchbar. These lines have to be placed after the jQuery/jQuery UI scripts -->
+    <!-- it is assumed that a <div id="searchBarContainer"></div> exists -->
+    <script> var sbarAttr = { 
+                                'backgroundIsWhite' : true, 
+                                'backgroundAlpha' : '0.2' 
+                            }; </script>
+    <script src="http://bussedesignstage.com/ajax/cl01.1/searchBar/scripts/initSearchBar.js"> </script>
+    <!-- <script src="http://cl01.1/searchBar/scripts/initSearchBar.js"> </script>  -->
+    
+          
+  </body>
+</html>

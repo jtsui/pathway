@@ -1,0 +1,387 @@
+/**
+ * @fileOverview CSS for clotho home page
+ * @project cl01
+ * @author werner@bussedesign.com
+ * 
+ */
+@import "normalize.css";
+@import "wgrid24.css";
+
+/**
+ * Typography
+ *
+ *
+ */
+body {
+  font-family: arial, helvetica, sans-serif; 
+  font-size: 12px; 
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  line-height:  1.3;
+  margin:  0;
+} 
+h1 { 
+  font-size: 24px; 
+} 
+h2 { 
+  font-size: 20px; 
+}
+h3 { 
+  font-size: 18px; 
+}
+h4 { 
+  font-size: 14px; 
+}
+em { 
+  font-style: italic; 
+}
+strong { 
+  font-weight: bold; 
+  color: inherit; 
+}
+small { 
+  font-size: 80%; 
+}
+
+blockquote, 
+blockquote p {
+  font-family: Georgia, serif;
+  font-size: 16px; 
+  line-height: 1.5;  
+  font-style: italic; 
+}
+blockquote { 
+  margin: 0 0 20px; 
+  padding: 10px; 
+}
+blockquote cite { 
+  display: block;
+  font-family: Helvetica-Neue, Arial, Helvetica, sans-serif;
+  font-size: 12px; 
+}
+blockquote cite:before { 
+  content: "\2014 \00A0"; 
+}
+blockquote cite a, 
+blockquote cite a:visited, 
+blockquote cite a:visited { 
+  color: #555; 
+}
+hr { 
+  border: solid #ddd; 
+  border-width: 1px 0 0; 
+  clear: both; 
+  margin: 10px 0 30px; 
+  height: 0;
+}
+a {
+  text-decoration: none;
+  color: #468baa;
+}
+
+
+
+/**
+ *
+ * utility styles
+ *
+ */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+#skipNav { 
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+}
+
+
+/**
+ *
+ * apply correct box model. this means padding is NOT substracted from neither width nor height
+ *
+ */
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+
+/**
+ *
+ * page
+ *
+ */
+body {
+  background: #676e7a;
+}
+#page {
+  background: #fff url('../assets/backgrounds/pageBackground.png') repeat-x left top;
+}
+
+
+/**
+ *
+ *  page header
+ *
+ */
+header {
+  height: 92px;
+}
+header .row {
+  margin-bottom: 0;
+}
+header #pageLogo {
+  margin-top: 10px;
+}
+
+
+/**
+ *
+ * top menu
+ *
+ */
+.menu.top {
+  padding: 0;
+  margin: 15px 0 0;
+  float:  right;
+  position: relative;
+}
+.menu.top li {
+  padding: 0;
+  margin: 0;
+  float:  left;
+  list-style: none none;
+  color: #fff;
+  font-size: 11px;
+}
+.menu.top li a {
+  display:  inline-block;
+  padding: 0 10px;
+  border-right: 1px solid #fff;
+  color: #fff;
+}
+.menu.top li a:hover {
+  text-decoration: underline;
+}
+.menu.top li:last-child a {
+  border-right: none;
+  padding-right: 0;
+}
+.menu.top .user a {
+  padding-left: 5px;
+}
+
+
+/**
+ *
+ * main menu
+ *
+ */
+.menu.main {
+  clear: right;
+  float: right;
+  margin-top: 33px;
+}
+.menu.main li {
+  padding: 0;
+  margin: 0;
+  float:  left;
+  list-style: none none;
+  color: #fff;
+  font-size: 11px;
+}
+.menu.main li a {
+  color: #fff;
+  padding: 0 20px;
+}
+.menu.main li a:hover {
+  text-decoration: underline;
+}
+
+.menu.main li:last-child a {
+  padding-right: 0;
+}
+
+
+/**
+ *
+ * footer menu
+ *
+ */
+footer .row,
+footer .menu {
+  margin: 0;
+  padding: 0;
+}
+footer .menuWrapper {
+  padding: 20px;
+}
+footer .menu li {
+  float: left;
+  list-style: none none outside;
+  font-size: 11px;
+}
+footer .menu .copyright {
+  padding-right: 10px;
+  color: #b9bcc2;
+}
+footer .menu li a {
+  padding: 0 10px;
+  border-left: 1px solid #fff;
+  color: #fff;
+}
+footer .menu li a:hover {
+  text-decoration: underline;
+}
+
+
+/**
+ * empty searchbar container in which we will insert the ... searchbar
+ */  
+.clotho {
+  height: 48px;
+}
+/* align the left side of the search input with the logo above */
+.clotho #searchBarContainer {
+  margin-left: -7px;
+}
+
+
+
+/**
+ *
+ * application placeholder
+ *
+ */
+.mainContent img {
+  display: block;
+  border: 1px solid #cdcccc;
+  margin: 10px auto 0;
+}
+.mainContent .buttonWrap {
+  background: #f6f6f6;
+  border: 1px solid #cdcccc;
+  border-top: none;
+  width: 901px;
+  height: 50px;
+  margin: 0 auto 130px;
+  overflow:hidden;
+}
+.centerButton {
+  float: left;
+  position: relative;
+  left: 50%;
+  overflow: visible;
+}
+.centerButton .button {
+	float: left;
+	position: relative;
+	right: 50%;
+	top: 7px;	
+}
+
+
+/**
+ *
+ * component styles
+ *
+ */
+
+/** 
+ * base button styles
+ */
+.button {
+  display: inline-block;
+  padding: 10px 35px;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  /* state transitions */
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  color: #fff;
+  /* background */
+  background-color: #666d79;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#666d79), to(#4a4f58));
+  background-image: -webkit-linear-gradient(#666d79, #4a4f58);
+  background-image: -moz-linear-gradient(top, #666d79, #4a4f58);
+  background-image: -ms-linear-gradient(#666d79, #4a4f58);
+  background-image: -o-linear-gradient(#666d79, #4a4f58);
+  background-image: linear-gradient(#666d79, #4a4f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666d79', endColorstr='#4a4f58', GradientType=0);
+  /* border */
+  border-bottom-color: #c8c8c8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  /* text shadow */
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* state transitions */
+}
+.button:hover {
+  color: #fff;
+  text-decoration: none;
+  /* background */
+  background-color: #4b5056;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4b5056), to(#37383c));
+  background-image: -webkit-linear-gradient(#4b5056, #37383c);
+  background-image: -moz-linear-gradient(top, #4b5056, #37383c);
+  background-image: -ms-linear-gradient(#4b5056, #37383c);
+  background-image: -o-linear-gradient(#4b5056, #37383c);
+  background-image: linear-gradient(#4b5056, #37383c);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b5056', endColorstr='#37383c', GradientType=0); 
+}
+
+.people_pic {
+float: middle;
+text-align: center;
+margin: auto;
+padding-right: 20px;
+padding-left: 20px;
+padding-top: 15px;
+max-height: 200px;
+display: block;
+}
+
+.people_text:first-line {
+  font-weight: bold;
+}
+
+.people_text {
+  float: middle;
+  text-align: center;
+  padding-right: 30px;
+  padding-left: 30px;
+  max-width: 200px;
+  font-size: 12px; 
+}

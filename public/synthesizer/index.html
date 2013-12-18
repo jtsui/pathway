@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9 ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="http://act.berkeley.edu/synthesizer/styles/normalize.css">
+    <link rel="stylesheet" href="http://act.berkeley.edu/synthesizer/styles/main.css" />
+<!--
+    <link rel="stylesheet" href="http://bussedesignstage.com/ajax/cl01.1/styles/normalize.css">
+    <link rel="stylesheet" href="http://bussedesignstage.com/ajax/cl01.1/styles/main.css" />
+//-->
+<!--
+    <script src="http://bussedesignstage.com/ajax/cl01.1/scripts/modernizr-2.6.2.min.js"></script>
+//-->  
+    <script src="http://act.berkeley.edu/synthesizer/scripts/modernizr-2.6.2.min.js"></script>  
+    <script>
+function loadPage(page) {
+	var el = document.getElementById("mainContent");
+	el.innerHTML = "<iframe frameborder=0 seamless='seamless' style='border: 0px solid; width: 100%; margin: 15px;' height=720px scrolling='no' src=\"" + page + "\"></iframe>";
+}
+
+    </script>
+  </head>
+  <body>
+    
+    <div id="page">
+      <div id="skipNav"><a href="#main">Skip Navigation</a></div>
+    
+      <header id="pageHeader" class="container">
+      <div class="row">
+        <div class="col width10">
+          <a href=""><img id="pageLogo" src="http://act.berkeley.edu/synthesizer/logos/logo_actSynthesizer.png" alt="Act Synthesizer Logo" /></a>
+        </div>
+        <div class="col width14">
+          <ul class="menu top">
+            <li class="user" >User:<a href=""><strong>Guest</strong></a></li>
+            <!--li class="logout"><a href="">Logout</a></li-->
+          </ul>
+          <ul class="menu main">
+            <li><a href="http://act.berkeley.edu/synthesizer">Home</a></li>
+<!--
+            <li><a href="http://act.berkeley.edu/people">Team</a></li>
+//-->
+            <li><a href="#" onclick="loadPage('http://act.berkeley.edu/synthesizer/people.html')">Team</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>    
+        
+      <div class="container clotho">
+        <div class="row">
+          <div class="col full clearfix">
+           
+            <div id="searchBarContainer"></div>
+            
+          </div>
+        </div>
+      </div>
+    
+      <!-- application place holder -->
+      <section id="main" role="main" class="container">
+        <div class="row">
+          <div class="col full mainContent" id="mainContent">
+            <!-- img src="synthesizer/assets/images/appImage.png" alt="" / -->
+            <iframe id="searchResult" frameborder=0 seamless="seamless" style="display: none; border: 1px solid; width: 100%; margin: 15px;" height="950px" scrolling="no" src=""></iframe> 
+            <div style="margin: 15px;">
+            <i>The tool is not publicly available yet.</i>
+            <h4>Examples</h4>
+	<center>
+		<table cellpadding=10px cellspacing=10px>
+		<tr>
+		<td><img style="border:0px" src=http://act.berkeley.edu/visuals/tylenol.png></td>
+		<td></td> <td></td>
+		<td><img style="border:0px" src=http://act.berkeley.edu/visuals/butanol.png></td>
+		<td></td> <td></td>
+		<td><img style="border:0px" src=http://act.berkeley.edu/visuals/myrcene.png></td>
+		</tr>
+		<tr>
+		<td align=center><a href="#" onclick="searchGraph('12832');">Tylenol (drug)            </a></td>
+		<td></td><td></td>
+		<td align=center><a href="#" onclick="searchGraph('8480')"> Butanol (biofuel)         </a></td>
+		<td></td><td></td>
+		<td align=center><a href="#" onclick="searchGraph('726')">  Myrcene (flavor/fragrance)</a></td>
+		</tr>
+		</table>
+	</center>
+            <p>
+		Some other interesting reachables are
+<a href="#" onclick="searchGraph('3487')">farnesene</a>,
+<a href="#" onclick="searchGraph('9878')">adipic acid</a>,
+<a href="#" onclick="searchGraph('9915')">glucaric acid</a>,
+<a href="#" onclick="searchGraph('3962')">palmitate</a>, and
+<a href="#" onclick="searchGraph('13140')">L-DOPS (anti-parkinson's)</a>.
+              We also have a list of all reachable targets. Contact
+              <a href="http://www.cs.berkeley.edu/~saurabhs/" target="_blank">Saurabh</a> if you wish to get access to it.
+		<!--
+              Here's a visual of our reachable space with Sigma chemicals highlighted:
+              <center>
+                <img src=http://act.berkeley.edu/visuals/act-nw-sigma.png width=100%/>
+              </center>
+		//-->
+            </p>
+            <br>
+            <br>
+
+            <h4>Searching</h4>
+            <p>
+              Search for possible pathways to a chemical by entering above its <b>standard InChI</b>, a <b>common name</b>, or its <b>Act ID</b>.
+              <br>For example, for tylenol, you can enter any one of the following:
+              <ol>
+                <li>InChI=1S/C8H9NO2/c1-6(10)9-7-2-4-8(11)5-3-7/h2-5,11H,1H3,(H,9,10)</li>
+                <li>paracetamol</li>
+                <li>12832</li>
+              </ol>
+            </p>
+            <br>
+            <h4>Interpreting the result</h4>
+            <p>
+              Chemical nodes are pale green except for the target node which is bright green. 
+              Reaction nodes are white labeled by the number of reaction entries in our database it represents. Green edges show the required reactants; black edges point to its products. Common cofactors are labeled on the edges, with different possibilities separated by parentheses. You can mouseover the nodes for information about the chemicals and reactions.
+            </p>
+            <br>
+            <p>
+              Note that the graphs shown may not be complete, displaying all possible pathways from our defined set of native metabolites) as there is a limit of about 50 chemicals shown in to avoid clutter. A red outline denotes that some paths to the chemical aren't displayed. A green outline denotes a member of our initial set of metabolites. Only concretely observed reactions are used.
+            </p>
+            <br>
+            <br>
+
+
+<!--
+            <h3>More Information</h3>
+            <p>
+              You can find more information about our group at <a href="http://act.berkeley.edu" target="_blank">act.berkeley.edu</a>.
+            </p>
+            <br>
+//-->
+          </div>
+<!--
+            <div class="buttonWrap">
+              <div class="centerButton">
+                <a class="button primary" href="">Submit</a>
+              </div>
+            </div>
+//-->
+          </div>
+        </div>
+      </section>
+      <!-- end application place holder -->
+    
+    </div> <!-- end page -->
+    
+    <footer class="container">
+      <div class="row">
+        <div class="col full menuWrapper">
+          <ul class="menu">
+            <li class="copyright">Copyright Act Synthesizer 2013 - All Rights Reserved</li>
+            <li><a href="http://act.berkeley.edu">Act Synthesizer Home<!-- More About Act//--></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    
+     
+    <!-- scripts load at the end of the body -->
+    <!-- preference is given to CDNs for faster loading -->
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="http://act.berkeley.edu/synthesizer/scripts/jquery-1.9.0.min.js"><\/script>')</script>
+    <!-- <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script> -->
+    <script>window.jQuery.ui || document.write('<script src="http://act.berkeley.edu/synthesizer/scripts/jquery-ui-1.10.0.min.js"><\/script>')</script>    
+    
+    <!-- the next two lines insert the searchbar. These lines have to be placed after the jQuery/jQuery UI scripts -->
+    <!-- it is assumed that a <div id="searchBarContainer"></div> exists -->
+    <script> var sbarAttr = {
+                  'backgroundIsWhite' : true, 
+                  'backgroundAlpha': '0'
+                }; </script>
+    <!-- <script src="http://bussedesignstage.com/ajax/cl01.1/searchBar/scripts/initSearchBar.js"> </script> -->
+    <script src="http://act.berkeley.edu/synthesizer/searchBar/scripts/initSearchBar.js"> </script>
+     
+  </body>
+</html>

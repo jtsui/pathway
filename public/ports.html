@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+
+30000
+up to date set of EROS, rxns (actfamilies)
+command?
+
+27017
+old set of EROs. 
+sudo mongod --dbpath=/Volumes/RunningData/ActDatabase-w-ROs-04-15-13/ --port 27017
+
+28007
+old set of rxns (actfamilies)
+sudo mongod --dbpath=/Volumes/RunningData/ActDatabase-wo-ROs-08-15-13/ --port 28007
+          -- has david's polymer list, robin's WHO list, drugbank, etc + chemical synonyms deconvolved using Jeff's data from chemspider
+          -- should replace the daemon above. But don't want to break things before checking.
+
+28008
+old set of rxns (actfamilies)
+sudo mongod --dbpath=/Volumes/RunningData/ActDatabase-wo-ROs-05-15-13 --port=28008
+
+27333
+/Volumes/RunningData/ActDatabase-wo-ROs-06-27-13
+Copy of 28008, Sarah's scratch DB. Basically for storing the results of ERO expansion.
+
+27334
+Copy of 30000, with litmining results from 100000 Journals abstracts
+mongod --dbpath=/Volumes/RunningData/ActDatabase-w-LitMine --port=27334
+
+27335
+Copy of 30000, with litmining results from 31234 Brenda abstracts 
+mongod --dbpath=/Volumes/RunningData/ActDatabase-w-LitMine-2 --port=27335
+
+27328
+pubmed data
+mongod --dbpath=/Volumes/RunningData/Pubmed_MongoDB --port=27328
+
+27329
+Act REST API Interface. Overview of API calls supported at pathway.berkeley.edu:27329. Project github: https://github.com/jtsui/ActREST
+in folder ActREST: 
+export _JAVA_OPTIONS="-Xmx10g"; play -Djava.awt.headless=true
+start 27329
+
+27330
+LitMining REST API Interface. Written in Python. Project github: https://github.com/jtsui/LitREST
+in folder LitREST:
+python application.py 27330 
+ 
+edit this file at: ~production/pathway/public/ports.html
+
+</body>
+</html>
